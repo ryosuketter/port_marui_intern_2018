@@ -1,0 +1,166 @@
+.entry-Wrapper {
+  .entry {
+    .entry-Inner {
+      // a
+    }
+  }
+}
+
+.entry-Up {
+  background: url("../img/entry/entry-up_bg.png")top 0 center /cover no-repeat;
+  height: 209px;
+}
+
+.entry-Middle {
+  background-color: #f0336d;
+  transition: 0.3s;
+
+  a {
+    color: #ffffff;
+    display: block;
+    height: 100%;
+    padding: 28px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 100%;
+
+    .Txt {
+      font-family: "Hammersmith One", sans-serif;
+      font-size: 42px;
+      letter-spacing: 2px;
+    }
+
+    .Txt_sub {
+      position: relative;
+      display: inline-block;
+      padding-left: 20px;
+      top: -7px;
+
+      font-size: 18px;
+    }
+
+    svg {
+      width: 35px;
+      height: 11px;
+
+      position: relative;
+      bottom: 10px;
+      left: 30px;
+
+      .st0{
+        fill: none;
+        stroke:#ffffff;
+        stroke-miterlimit: 10;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: #ffffff;
+
+    a {
+      color: #f0336d;
+
+      svg {
+
+        .st0{
+          fill: none;
+          stroke: #f0336d;
+          stroke-miterlimit: 10;
+        }
+      }
+    }
+  }
+}
+
+.entry-Bottom {
+  background: url("../img/entry/entry-bottom_bg.png")top 0 center /cover no-repeat;
+  height: 209px;
+}
+
+@include max-screen($BREAK_POINT_TABLET) {
+}
+
+@include max-screen($BREAK_POINT_SP_iPhone6) {
+  .entry-Wrapper {
+    .entry {
+      .entry-Inner {
+        // a
+      }
+    }
+  }
+
+  .entry-Up {
+    background: url("../img/entry/entry-up_bg_sp.png")top 0 center /cover no-repeat;
+    height: 90px;
+  }
+
+  .entry-Middle {
+    background-color: #f0336d;
+    transition: 0.3s;
+
+    a {
+      color: #ffffff;
+      display: block;
+      height: 100%;
+      padding: 10px 0;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.3s;
+      width: 100%;
+
+      .Txt {
+        font-family: "Hammersmith One", sans-serif;
+        font-size: 20px;
+        letter-spacing: 2px;
+      }
+
+      .Txt_sub {
+        position: relative;
+        display: inline-block;
+        padding-left: 20px;
+        top: -2px;
+
+        font-size: 12px;
+      }
+
+      svg {
+        width: 25px;
+        height: 10px;
+
+        position: relative;
+        bottom: 4px;
+        left: 10px;
+
+        .st0{
+          fill: none;
+          stroke:#ffffff;
+          stroke-miterlimit: 10;
+        }
+      }
+    }
+
+    &:hover {
+      background-color: #f0336d;
+
+      a {
+        color: #ffffff;
+
+        svg {
+
+          .st0{
+            fill: none;
+            stroke: #ffffff;
+            stroke-miterlimit: 10;
+          }
+        }
+      }
+    }
+  }
+
+  .entry-Bottom {
+    background: url("../img/entry/entry-bottom_bg_sp.png")top 0 center /cover no-repeat;
+    height: 90px;
+  }
+}

@@ -1,0 +1,36 @@
+include /_includes/_variables
+
+block variables
+doctype html
+html(lang=lang)
+  head(prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# " + pageOgpType + ": http://ogp.me/ns/" + pageOgpType + "#")
+    include /_includes/_meta
+    block meta
+      +meta('./')
+
+  body
+    //- ローディング中 非表示にするだけのクラス
+    #js-Main_Contents
+      include /_includes/_header
+      block header
+        +header('./')
+
+      block content
+
+      include /_includes/_footer
+      block footer
+        +footer('./')
+
+      include /_includes/_sp_header_nav
+      block sp_header_nav
+        +sp_header_nav('./')
+
+      include /_includes/_script
+      block script
+        +script('./')
+
+    //- ローディング用
+    .loader-Bg#js-Loading_Contents
+      .loading
+        img.for-Sp(src='../assets/img/loading/logo_2.svg', alt='ロゴ')
+      .loading-Bar

@@ -1,0 +1,58 @@
+#js-Main_Contents {
+  animation-delay: 3s;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-name: display_show;
+  display: none;
+  opacity: 0;
+}
+
+.loader-Bg {
+  position: fixed;
+  top: 0;
+
+  background-color: #ffffff;
+  height: 100vh;
+  width: 100%;
+  z-index: $Z_LOADING_BG;
+
+  .loading {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+
+    margin: 0 auto;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: $Z_LOADING;
+
+    img {
+      width: 20%;
+    }
+  }
+
+  .loading-Bar {
+    position: absolute;
+    top: 55%;
+
+    animation-duration: 2.8s;
+    animation-fill-mode: forwards;
+    animation-name: loading_Bar;
+    animation-timing-function: cubic-bezier(1,-0.05,0.99,0.84);
+    background-color: #52645a;
+    height: 1px;
+    width: 100%;
+    z-index: $Z_LOADING;
+  }
+}
+
+@include max-screen($BREAK_POINT_SP_iPhone6) {
+  .loader-Bg {
+    .loading {
+      img {
+        width: 50%;
+      }
+    }
+  }
+}

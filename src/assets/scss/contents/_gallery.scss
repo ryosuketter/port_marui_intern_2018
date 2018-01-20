@@ -1,0 +1,174 @@
+.gallery-Wrapper {
+  .gallery {
+    position: relative;
+    .gallery-Inner {
+      margin: 0 auto;
+      max-width: 1200px;
+      padding-top: 76px;
+      padding-bottom: 60px;
+    }
+
+    .gallery-Ornament_Wrapper {
+      position: absolute;
+      bottom: 8%;
+      left: 0;
+      z-index: $Z_ORNAMENT;
+
+      .for-Sp {
+        display: none;
+      }
+    }
+  }
+}
+
+.gallery-Title {
+  margin-bottom: 44px;
+  text-align: center;
+
+  h2 {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 42px;
+    letter-spacing: 3px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.gallery-Img_Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .gallery-Img {
+    width: 30%;
+    font-size: 0;
+    margin: 12px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+@include max-screen($BREAK_POINT_TABLET) {
+  .gallery-Wrapper {
+    .gallery {
+      position: relative;
+      .gallery-Inner {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding-top: 76px;
+      }
+
+      .gallery-Ornament_Wrapper {
+        position: absolute;
+        bottom: 8%;
+        left: 0;
+        z-index: $Z_ORNAMENT;
+      }
+    }
+  }
+
+  .gallery-Title {
+    margin-bottom: 44px;
+    text-align: center;
+
+    h2 {
+      font-family: "Hammersmith One", sans-serif;
+      font-size: 42px;
+      letter-spacing: 3px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .gallery-Img_Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .gallery-Img {
+      width: 100%;
+      font-size: 0;
+      margin: 0px;
+      padding: 0 20px 10px;
+      text-align: center;
+
+      img {
+        width: 60%;
+      }
+    }
+  }
+}
+
+@include max-screen($BREAK_POINT_SP_iPhone6) {
+  .gallery-Wrapper {
+    .gallery {
+      position: relative;
+      .gallery-Inner {
+        margin: 0 auto;
+        max-width: 1200px;
+        padding-top: 45px;
+        padding-bottom: 50px;
+      }
+
+      .gallery-Ornament_Wrapper {
+        position: absolute;
+        bottom: -4%;
+        left: 0;
+        z-index: $Z_ORNAMENT;
+
+        img {
+          width: 50px;
+        }
+
+        .for-Pc {
+          display: none;
+        }
+        .for-Sp {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .gallery-Title {
+    margin-bottom: 26px;
+    text-align: center;
+
+    h2 {
+      font-family: "Hammersmith One", sans-serif;
+      font-size: 28px;
+      letter-spacing: 3px;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  .gallery-Img_Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .gallery-Img {
+      width: 100%;
+      font-size: 0;
+      margin: 0px;
+      padding: 0 20px 10px;
+      text-align: center;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+//- header
+mixin header(path)
+  header.st-Header_Wrapper#js-Header
+    .st-Header_Inner
+      .st-Header_Logo
+        a(href="#")
+          img(src='../assets/img/header/logo.png', alt='ロゴ')
+      .st-Header_Entry_Menu_Wrapper
+        .st-Header_EntryWrapper
+          ul
+            li.txt_link
+              a(href="#message")
+                p MESSAGE
+                span メッセージ
+            li.txt_link
+              a(href="#voice")
+                p VOICE
+                span 参加者の声
+            li.txt_link
+              a(href="#program")
+                p PROGRAM
+                span プログラム
+            li.txt_link
+              a(href="#info")
+                p INFORMATION
+                span 基本情報
+            li.btn
+              a(href="https://r-ship2.jp/2019/marui/register/" target="_blank")
+                p ENTRY
+                span エントリー
+        .st-Header_MenuWrapper.js-Btn
+          .st-Header_Menu
+            span.top
+            span.mid
+            span.btm
+            p.txt MENU
+
+//- /header

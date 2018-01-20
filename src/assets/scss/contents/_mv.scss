@@ -1,0 +1,173 @@
+.mv-Wrapper {
+  .mv {
+    .mv-Inner {
+      position: relative;
+
+      background: url("../img/mv/mv-bg.png")top 0 center /cover no-repeat;
+      height: 100vh;
+
+      .mv-Img_Wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        animation-delay: 4.2s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-name: mv_Fade_In;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+
+        h1 {
+          font-size: 0;
+        }
+
+        .for-Sp {
+          display: none;
+        }
+      }
+
+      .mv-ScrollWrapper {
+        position: absolute;
+        bottom: 3%;
+        left: 50%;
+
+        animation-delay: 4.5s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-name: mv_Fade_In;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+
+        .mv-Scroll {
+          // @include mv-SubTitle_Underlayer;
+
+          .mv-ScrollInner {
+            position: relative;
+
+            color: #242424;
+            font-size: 12px;
+            letter-spacing: 1px;
+
+            span {
+              display: block;
+            }
+
+            .outline {
+              border: 2px solid #242424;
+              border-radius: 12px;
+              height: 44px;
+              margin: 0 auto;
+              width: 24px;
+            }
+
+            .ball {
+              position: absolute;
+              left: 50%;
+
+              transform: translateX(-50%);
+            }
+
+            .ball {
+              top: 28px;
+
+              animation-duration: 2s;
+              animation-iteration-count: infinite;
+              animation-name: scroll_roop;
+              background-color: #242424;
+              border-radius: 100%;
+              height: 6px;
+              width: 6px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include max-screen($BREAK_POINT_TABLET) {
+}
+
+@include max-screen($BREAK_POINT_SP_iPhone6) {
+  .mv-Wrapper {
+    .mv {
+      .mv-Inner {
+        position: relative;
+
+        background: url("../img/mv/mv-bg_sp.png")top 0 center /cover no-repeat;
+        // height: 430px;
+        height: 100vh;
+
+        .mv-Img_Wrapper {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+
+          .for-Pc {
+            display: none;
+          }
+          .for-Sp {
+            display: block;
+            width: 293px;
+          }
+        }
+
+        .mv-ScrollWrapper {
+          position: absolute;
+          bottom: 3%;
+          left: 50%;
+
+          transform: translate(-50%, -50%);
+
+          .mv-Scroll {
+            // @include mv-SubTitle_Underlayer;
+            display: none;
+
+            // .mv-ScrollInner {
+            //   position: relative;
+            //
+            //   color: #242424;
+            //   font-size: 12px;
+            //   letter-spacing: 1px;
+            //
+            //   span {
+            //     display: block;
+            //   }
+            //
+            //   .outline {
+            //     border: 2px solid #242424;
+            //     border-radius: 12px;
+            //     height: 44px;
+            //     margin: 0 auto;
+            //     width: 24px;
+            //   }
+            //
+            //   .ball {
+            //     position: absolute;
+            //     left: 50%;
+            //
+            //     transform: translateX(-50%);
+            //   }
+            //
+            //   .ball {
+            //     top: 28px;
+            //
+            //     animation-duration: 2s;
+            //     animation-iteration-count: infinite;
+            //     animation-name: scroll_roop;
+            //     background-color: #242424;
+            //     border-radius: 100%;
+            //     height: 6px;
+            //     width: 6px;
+            //   }
+            // }
+          }
+        }
+      }
+    }
+  }
+}

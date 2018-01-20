@@ -1,0 +1,28 @@
+//- _sp_header_nav
+mixin sp_header_nav(path)
+  .sp-Nav_Wrapper_Bg.nav-Up#js-Nav_Up
+  .sp-Nav_Wrapper_Bg.nav-Bottom#js-Nav_Btm
+  .sp-Nav_Wrapper#js-Nav
+    .sp-Nav
+      .sp-Nav_Inner
+        ul
+          li.sp-Nav_Txt.appear01
+            a.js-Btn(href="#message")
+              p MESSAGE
+              span メッセージ
+          li.sp-Nav_Txt.appear02
+            a.js-Btn(href="#voice")
+              p VOICE
+              span 参加者の声
+          li.sp-Nav_Txt.appear03
+            a.js-Btn(href="#program")
+              p PROGRAM
+              span プログラム
+          li.sp-Nav_Txt.appear04
+            a.js-Btn(href="#info")
+              p INFORMATION
+              span 基本情報
+          li.sp-Nav_Btn.appear05
+            a.js-Btn(href="https://r-ship2.jp/2019/marui/register/" target="_blank")
+              p ENTRY
+              span 今すぐエントリーする

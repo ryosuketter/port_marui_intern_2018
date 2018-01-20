@@ -1,0 +1,179 @@
+.voice-Wrapper {
+  .voice {
+    position: relative;
+
+    .voice-Inner {
+      margin: 0 auto;
+      max-width: 1050px;
+      padding-top: 90px;
+      padding-bottom: 80px;
+    }
+
+    .voice-Ornament_Wrapper {
+      position: absolute;
+      top: 22%;
+      left: 0;
+    }
+  }
+}
+
+.voice-Contents_Wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .voice-Contents {
+    position: relative;
+
+    padding-top: 13px;
+    text-align: center;
+    width: 33.33%;
+
+    .voice-Title {
+      position: absolute;
+      top: 47%;
+      left: 48%;
+
+      text-align: left;
+      transform: translate(-50%, -50%);
+      z-index: $Z_TITLE;
+
+      h2 {
+        font-family: "Hammersmith One", sans-serif;
+        font-size: 42px;
+        letter-spacing: 3px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+        padding-left: 6px;
+      }
+    }
+  }
+}
+
+
+@include max-screen($BREAK_POINT_TABLET) {
+  .voice-Wrapper {
+    .voice {
+      position: relative;
+      .voice-Inner {
+        margin: 0 auto;
+        max-width: 1050px;
+        padding-top: 90px;
+        padding-bottom: 50px;
+      }
+
+      .voice-Ornament_Wrapper {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  .voice-Contents_Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .voice-Contents {
+      position: relative;
+
+      padding-top: 13px;
+      text-align: center;
+      width: 50%;
+
+      .voice-Title {
+        position: absolute;
+        top: 47%;
+        left: 48%;
+
+        text-align: left;
+        transform: translate(-50%, -50%);
+        z-index: $Z_TITLE;
+
+        h2 {
+          font-family: "Hammersmith One", sans-serif;
+          font-size: 42px;
+          letter-spacing: 3px;
+        }
+
+        span {
+          font-size: 14px;
+          font-weight: 600;
+          padding-left: 6px;
+        }
+      }
+    }
+  }
+}
+
+@include max-screen($BREAK_POINT_SP_iPhone6) {
+  .voice-Wrapper {
+    .voice {
+      position: relative;
+      .voice-Inner {
+        margin: 0 auto;
+        max-width: 1050px;
+        width: 100%;
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+
+      .voice-Ornament_Wrapper {
+        position: absolute;
+        top: 13px;
+        left: 0;
+
+        img {
+          width: 100px;
+        }
+      }
+    }
+  }
+
+  .voice-Contents_Wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .voice-Contents {
+      position: relative;
+
+      padding-top: 0px;
+      padding-bottom: 20px;
+      text-align: center;
+      width: 100%;
+
+      img {
+        width: 225px;
+      }
+
+      .voice-Title {
+        position: static;
+        top: auto;
+        left: auto;
+        width: 100%;
+        display: block;
+
+        text-align: center;
+        transform: translate(0%, 0%);
+        z-index: $Z_TITLE;
+
+        h2 {
+          font-family: "Hammersmith One", sans-serif;
+          font-size: 28px;
+          letter-spacing: 3px;
+        }
+
+        span {
+          font-size: 12px;
+          font-weight: 600;
+          padding-left: 0px;
+        }
+      }
+    }
+  }
+}

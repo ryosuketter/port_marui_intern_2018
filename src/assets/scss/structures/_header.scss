@@ -1,0 +1,333 @@
+// 役割をわかりやすくするために、ヘッダー・フッターのコンポーネントにはst-をプレフィックスにつける（p142）
+
+// st-header
+.st-Header_Wrapper {
+  position: fixed;
+  top: -10%;
+  width: 100%;
+  z-index: $Z_HEADER;
+  background-color: #fff;
+  transition: 0.6s;
+
+  .st-Header_Inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 40px 17px;
+
+    .st-Header_Logo {
+      transition: 0.6s;
+      a {
+        display: block;
+        padding-top: 9px;
+        width: 100%;
+        img {
+          // a
+        }
+      }
+    }
+
+    .st-Header_Entry_Menu_Wrapper {
+      display: flex;
+      // width: 90%;
+      .st-Header_EntryWrapper {
+        transition: 0.6s;
+        ul {
+          display: flex;
+          li {
+            list-style: none;
+            padding: 12px 0 6px;
+            text-align: center;
+
+            &:not(:last-child) {
+              margin-right: 60px;
+            }
+
+            a {
+              display: block;
+              text-decoration: none;
+              transition: 0.3s;
+              width: 100%;
+
+              p {
+                font-family: "Hammersmith One", sans-serif;
+                font-size: 17px;
+                letter-spacing: 2px;
+                line-height: 1;
+              }
+              span {
+                font-size: 12px;
+              }
+            }
+
+
+            &.btn {
+              background-color: #f0336d;
+              border: 1px solid #f0336d;
+              border-radius: 30px;
+              transition: 0.3s;
+              width: 164px;
+
+              a {
+                color: #ffffff;
+
+                p {
+                  // a
+                }
+              }
+              &:hover {
+                background-color: #ffffff;
+
+                a {
+                  color: #f0336d;;
+                }
+              }
+            }
+            &:hover {
+              a {
+                color: #f0336d;;;
+              }
+            }
+          }
+        }
+      }
+    }
+    .st-Header_MenuWrapper {
+      display: none;
+      .st-Header_Menu {
+        .top {
+          //a
+        }
+        .mid {
+          //a
+        }
+        .btm {
+          //a
+        }
+      }
+    }
+  }
+  &.active {
+    background-color: rgba(#ffffff, 0);
+
+    .st-Header_Inner {
+
+      .st-Header_Logo {
+        opacity: 0;
+      }
+
+      .st-Header_Entry_Menu_Wrapper {
+        .st-Header_EntryWrapper {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &.fade-In {
+    top: 0;
+    transition: 0.8s;
+  }
+}
+
+@include max-screen($BREAK_POINT_TABLET) {
+  .st-Header_Wrapper {
+    .st-Header_Inner {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 0 17px;
+
+      .st-Header_Logo {
+        a {
+          display: block;
+          padding-top: 11px;
+          width: 100%;
+          img {
+            width: 60px;
+          }
+        }
+      }
+
+      .st-Header_Entry_Menu_Wrapper {
+        display: flex;
+        // width: 90%;
+
+        .st-Header_EntryWrapper {
+          ul {
+            display: flex;
+            li {
+              list-style: none;
+              // padding: 6px 0;
+              padding: 8px 0 5px;
+              text-align: center;
+
+              &:not(:last-child) {
+                margin-right: 60px;
+              }
+
+              a {
+                display: block;
+                text-decoration: none;
+                transition: 0.2s;
+                width: 100%;
+
+                p {
+                  font-family: "Hammersmith One", sans-serif;
+                  font-size: 15px;
+                  letter-spacing: 1px;
+                  line-height: 1;
+                }
+                span {
+                  font-size: 11px;
+                }
+              }
+
+              &.txt_link {
+                display: none;
+              }
+
+              &.btn {
+                background-color: #f0336d;
+                border: 1px solid #f0336d;
+                border-radius: 0;
+                transition: 0.3s;
+                width: 100px;
+
+                a {
+                  color: #ffffff;
+
+                  p {
+                    // a
+                  }
+                }
+                &:hover {
+                  background-color: #ffffff;
+
+                  a {
+                    color: #f0336d;
+                  }
+                }
+              }
+              &:hover {
+                a {
+                  color: #f0336d;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .st-Header_MenuWrapper {
+        position: relative;
+
+        cursor: pointer;
+        display: block;
+        height: 50px;
+        width: 50px;
+
+        z-index: $Z_HEADER_MENU;
+
+        .st-Header_Menu {
+          color: #6e7e76;
+
+          span {
+            position: absolute;
+            left: 16px;
+
+            background-color: #6e7e76;
+            display: block;
+            height: 2px;
+            transition: 0.2s;
+            width: 18px;
+          }
+
+          .top {
+            top: 13px;
+          }
+          .mid {
+            top: 20px;
+          }
+          .btm {
+            top: 27px;
+          }
+
+          .txt {
+            position: absolute;
+            bottom: 1px;
+            left: 50%;
+
+            font-family: "Hammersmith One", sans-serif;
+            font-size: 11px;
+            transform: translateX(-50%);
+            transition: 0.2s;
+          }
+        }
+
+        &:hover {
+          .st-Header_Menu {
+
+            .top {
+              top: 12px;
+            }
+            .mid {
+              top: 20px;
+            }
+            .btm {
+              top: 28px;
+            }
+          }
+        }
+
+        &.active {
+          .st-Header_Menu {
+            color: #6e7e76;
+
+            span {
+              position: absolute;
+              left: 16px;
+
+              background-color: #6e7e76;
+              display: block;
+              height: 2px;
+              width: 18px;
+            }
+
+            .top {
+              // top: 13px;
+              animation-duration: 0.2s;
+              animation-fill-mode: forwards;
+              animation-name: menu_top;
+            }
+
+            .mid {
+              // top: 20px;
+              animation-duration: 0.2s;
+              animation-fill-mode: forwards;
+              animation-name: menu_mid;
+            }
+
+            .btm {
+              // top: 27px;
+              animation-duration: 0.2s;
+              animation-fill-mode: forwards;
+              animation-name: menu_btm;
+            }
+
+            .txt {
+              position: absolute;
+              bottom: -6px;
+              left: 50%;
+
+              font-family: "Hammersmith One", sans-serif;
+              font-size: 0;
+              opacity: 0;
+              transform: translateX(-50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include max-screen($BREAK_POINT_SP_iPhone6) {
+}

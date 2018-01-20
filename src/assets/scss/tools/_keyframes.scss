@@ -1,0 +1,126 @@
+@keyframes to_top_Fdein {
+  0% {
+    position: relative;
+    top: 10px;
+
+    opacity: 0;
+  }
+  100% {
+    position: relative;
+    top: 0;
+
+    opacity: 1;
+  }
+}
+
+@keyframes scroll_roop {
+  0% {
+    top: 10px;
+
+    opacity: 1;
+  }
+  70% {
+    top: 28px;
+
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes menu_top {
+  0% {
+    top: 13px;
+  }
+
+  50% {
+    top: 13px;
+
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: 20px;
+
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes menu_mid {
+  0% {
+    top: 20px;
+
+    opacity: 1;
+  }
+
+  50% {
+    top: 13px;
+
+    opacity: 0;
+  }
+
+  100% {
+    top: 13px;
+
+    opacity: 0;
+  }
+}
+
+@keyframes menu_btm {
+  0% {
+    top: 27px;
+  }
+
+  50% {
+    top: 13px;
+
+    transform: rotate(0deg);
+  }
+
+  100% {
+    top: 20px;
+
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes nav_Fadein {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes display_show {
+  0% {
+    opacity: 0;
+    display: none;
+  }
+
+  100% {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes loading_Bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes mv_Fade_In {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

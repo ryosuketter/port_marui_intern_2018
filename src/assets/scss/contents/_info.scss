@@ -1,0 +1,237 @@
+.info-Wrapper {
+  background-image: linear-gradient(
+  -45deg,
+  #ffffff 25%,
+  #ececec 25%, #ececec 50%,
+  #ffffff 50%, #ffffff 75%,
+  #ececec 75%, #ececec
+  );
+  // 幅8px、高さ8pxで背景画像のサイズを指定
+  // https://mae.chab.in/archives/2269
+  background-size: 8px 8px;
+
+  .info {
+    position: relative;
+
+    .info-Inner {
+      margin: 0 auto;
+      padding-bottom: 60px;
+      padding-top: 70px;
+    }
+
+    .info-Ornament_Wrapper01 {
+      position: absolute;
+      top: -3%;
+      right: 0;
+
+      z-index: $Z_ORNAMENT;
+
+      .for-Sp {
+        display: none;
+      }
+    }
+  }
+}
+
+.info-Table_Wrapper {
+  position: relative;
+
+  background-color: #ffffff;
+  margin: 0 auto;
+  padding: 60px 95px 20px;
+  width: 1000px;
+
+  .info-Title {
+    padding-bottom: 35px;
+    text-align: center;
+
+    h2 {
+      font-family: "Hammersmith One", sans-serif;
+      font-size: 42px;
+      letter-spacing: 3px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .info-Body_Wrapper {
+    .info-Row_Wrapper {
+      border-top: 1px solid rgba(#282828, 0.3);
+      display: flex;
+      font-size: 16px;
+      padding: 44px 0;
+
+
+      .info-Row_Left {
+        font-weight: 600;
+        padding-left: 18px;
+        width: 18%;
+      }
+
+      .info-Row_Right {
+        width: 82%;
+        letter-spacing: 1px;
+
+        .attn {
+          font-size: 14px;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  .info-Ornament_Wrapper02 {
+    position: absolute;
+    bottom: 3%;
+    left: -6%;
+
+    z-index: $Z_ORNAMENT;
+  }
+}
+
+@include max-screen($BREAK_POINT_TABLET) {
+  .info-Wrapper {
+    .info {
+      position: relative;
+
+      .info-Inner {
+        margin: 0 auto;
+        padding: 70px 22px 60px;
+      }
+    }
+  }
+
+  .info-Table_Wrapper {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 60px 20px 20px;
+    width: 100%;
+
+    .info-Title {
+      padding-bottom: 35px;
+      text-align: center;
+
+      h2 {
+        font-family: "Hammersmith One", sans-serif;
+        font-size: 42px;
+        letter-spacing: 3px;
+      }
+
+      span {
+        font-size: 14px;
+        font-weight: 600;
+      }
+    }
+
+    .info-Body_Wrapper {
+      .info-Row_Wrapper {
+        border-top: 1px solid rgba(#282828, 0.3);
+        display: flex;
+        font-size: 16px;
+        padding: 44px 0;
+
+
+        .info-Row_Left {
+          font-weight: 600;
+          padding-left: 18px;
+          width: 20%;
+        }
+
+        .info-Row_Right {
+          width: 80%;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+@include max-screen($BREAK_POINT_SP_iPhone6) {
+  .info-Wrapper {
+    .info {
+      position: relative;
+
+      .info-Inner {
+        margin: 0 auto;
+        padding: 40px 22px 60px;
+      }
+
+      .info-Ornament_Wrapper01 {
+        position: absolute;
+        top: auto;
+        right: 0;
+        bottom: 0;
+
+        z-index: $Z_ORNAMENT;
+
+        .for-Pc {
+          display: none;
+        }
+
+        .for-Sp {
+          display: block;
+          width: 60px;
+        }
+      }
+    }
+  }
+
+  .info-Table_Wrapper {
+    background-color: #ffffff;
+    margin: 0 auto;
+    padding: 30px 20px 20px;
+    width: 100%;
+
+    .info-Title {
+      padding-bottom: 26px;
+      text-align: center;
+
+      h2 {
+        font-family: "Hammersmith One", sans-serif;
+        font-size: 28px;
+        letter-spacing: 3px;
+      }
+
+      span {
+        font-size: 12px;
+        font-weight: 600;
+      }
+    }
+
+    .info-Body_Wrapper {
+      .info-Row_Wrapper {
+        border-top: 1px solid rgba(#282828, 0.3);
+        display: block;
+        font-size: 14px;
+        padding: 15px 0;
+
+        .info-Row_Left {
+          font-weight: 600;
+          padding-bottom: 8px;
+          padding-left: 0;
+          width: 100%;
+        }
+
+        .info-Row_Right {
+          width: 100%;
+
+          p {
+            line-height: 2;
+            letter-spacing: 1px;
+          }
+
+          .attn {
+            font-size: 12px;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+    .info-Ornament_Wrapper02 {
+      display: none;
+    }
+  }
+}

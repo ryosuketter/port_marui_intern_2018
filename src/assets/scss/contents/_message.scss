@@ -1,0 +1,208 @@
+.message-Wrapper {
+  .message {
+    position: relative;
+    .message-Inner {
+      margin: 0 auto;
+      max-width: 1050px;
+      padding-top: 76px;
+    }
+
+    .message-Ornament_Wrapper {
+      position: absolute;
+      top: 9%;
+      right: 8px;
+
+      .for-Sp {
+        display: none;
+      }
+    }
+  }
+}
+
+.message-Title {
+  margin-bottom: 44px;
+  text-align: center;
+
+  h2 {
+    font-family: "Hammersmith One", sans-serif;
+    font-size: 42px;
+    letter-spacing: 3px;
+  }
+
+  span {
+    font-size: 14px;
+    font-weight: 600;
+  }
+}
+
+.message-Contents_Wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+
+  .message-Txt_Wrapper {
+    padding-left: 62px;
+    padding-top: 45px;
+    width: 50%;
+
+    h3 {
+      font-size: 35px;
+      letter-spacing: 2px;
+      margin-bottom: 35px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 2.2;
+    }
+  }
+
+  .message-Img_Wrapper {
+    width: 50%;
+  }
+}
+
+
+@include max-screen($BREAK_POINT_TABLET) {
+  .message-Wrapper {
+    .message {
+      position: relative;
+      .message-Inner {
+        margin: 0 auto;
+        max-width: 500px;
+        padding-top: 60px;
+      }
+
+      .message-Ornament_Wrapper {
+        position: absolute;
+        top: 9%;
+        right: 0;
+
+        .for-Pc {
+          display: none;
+        }
+        .for-Sp {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .message-Title {
+    margin-bottom: 10px;
+    text-align: center;
+
+    h2 {
+      font-family: "Hammersmith One", sans-serif;
+      font-size: 42px;
+      letter-spacing: 3px;
+    }
+
+    span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+  }
+
+  .message-Contents_Wrapper {
+    display: block;
+    flex-direction: row-reverse;
+
+    .message-Txt_Wrapper {
+      padding-bottom: 45px;
+      padding-left: 0;
+      padding-top: 45px;
+      width: 100%;
+
+      h3 {
+        font-size: 35px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 2.2;
+      }
+    }
+
+    .message-Img_Wrapper {
+      width: 100%;
+    }
+  }
+}
+
+@include max-screen($BREAK_POINT_SP_iPhone6) {
+  .message-Wrapper {
+    .message {
+      position: relative;
+      .message-Inner {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 50px;
+        width: 100%;
+      }
+
+      .message-Ornament_Wrapper {
+        position: absolute;
+        top: 8%;
+        right: 0;
+
+        .for-Pc {
+          display: none;
+        }
+        .for-Sp {
+          display: block;
+          width: 72px;
+        }
+      }
+    }
+  }
+
+  .message-Title {
+    margin-bottom: 10px;
+    text-align: center;
+
+    h2 {
+      font-family: "Hammersmith One", sans-serif;
+      font-size: 28px;
+      letter-spacing: 3px;
+    }
+
+    span {
+      font-size: 12px;
+      font-weight: 600;
+    }
+  }
+
+  .message-Contents_Wrapper {
+    display: block;
+    flex-direction: row-reverse;
+
+    .message-Txt_Wrapper {
+      padding-bottom: 19px;
+      padding-left: 0;
+      padding-top: 14px;
+      width: 100%;
+
+      h3 {
+        font-size: 24px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 2;
+      }
+    }
+
+    .message-Img_Wrapper {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

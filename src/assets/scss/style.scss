@@ -1,0 +1,42 @@
+// ==========================================================================
+// settings
+// ==========================================================================
+@import "./settings/_variables.scss";
+@import "./settings/_zindex.scss";
+
+// ==========================================================================
+// tools
+// ==========================================================================
+@import "./tools/mixins/_mediaqueries.scss";
+@import "./tools/_line.scss";
+@import "./tools/_keyframes.scss";
+@import "./tools/mixins/_index.scss";
+
+// ==========================================================================
+// base（基本normalize.css）
+// ==========================================================================
+@import "./base/_normalize.scss";
+
+// ==========================================================================
+// contents（よく使うコンポーネントと各カテゴリーごとにファイルをつくる）
+// ==========================================================================
+@import "./contents/_loading.scss";
+@import "./contents/_mv.scss";
+@import "./contents/_message.scss";
+@import "./contents/_voice.scss";
+@import "./contents/_program.scss";
+@import "./contents/_gallery.scss";
+@import "./contents/_info.scss";
+@import "./contents/_entry.scss";
+
+// ==========================================================================
+// structures（共通部分の定義）
+// ==========================================================================
+@import "./structures/_footer.scss";
+@import "./structures/_header.scss";
+@import "./structures/_sp_header_nav.scss";
+
+// ==========================================================================
+// vendor（DLして使うファイルとか）
+// ==========================================================================
+@import "./vendor/_animate.scss";
